@@ -2,11 +2,15 @@ package com.springboot.two.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 
+
+/*Entity annotation is used to declare the user class as an Entity class
+ * that should be mapped to our database*/  
 @Entity
 public class User {
 
 	//setting up our primary key to be id with auto increments
 	@Id
+	//Generated value specifies our primary key should be generated automaticaly
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
