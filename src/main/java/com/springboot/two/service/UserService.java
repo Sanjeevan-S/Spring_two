@@ -7,11 +7,14 @@ import com.springboot.two.model.User;
 import com.springboot.two.repository.UserRepository;
 
 @Service
+//Spring Boot annotation for a service class that contains the business logic
 public class UserService {
 
 	@Autowired
+	//Autowired is to tell Spring to automatically inject an instance of usrrepo class. 
 	private UserRepository userRepository;
 	
+	//
 	public Object createUser(User reqData) {
 		return userRepository.save(reqData);
 	}
